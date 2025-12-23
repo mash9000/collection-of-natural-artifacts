@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../variables' as variables;
+@use '../../variables' as variables;
 
 .navbar__link--visited:active {
     color: map.get(variables.$mainColors, 'visitedColor');

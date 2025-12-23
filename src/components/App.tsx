@@ -1,4 +1,4 @@
-import {NavBar} from "./NavBar.tsx";
+import {Header} from "./Header.tsx";
 
 export const App = () => {
     const navBarMenuItems: { title: string, link: URL }[] = [
@@ -8,6 +8,6 @@ export const App = () => {
         {title: 'Контакты', link: new URL('https://ya.ru/')},
     ]
     return (
-        <NavBar menuItem={navBarMenuItems}/>
+        <Header menuItem={navBarMenuItems}/>
     )
 }

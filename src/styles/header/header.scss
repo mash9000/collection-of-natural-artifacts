@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use '../variables' as variables;
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: map.get(variables.$mainColors, 'bgColor');
+
+  & > div {
+    width: 1110px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}

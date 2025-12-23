@@ -1,8 +1,8 @@
-import '../styles/navbar/navbar.scss';
-import '../styles/navbar/navbar__link.scss';
-import '../styles/navbar/navbar__link--hover.scss';
-import '../styles/navbar/navbar__link--focus.scss';
-import '../styles/navbar/navbar__link--active.scss';
+import '../styles/header/navbar/navbar.scss';
+import '../styles/header/navbar/navbar__link.scss';
+import '../styles/header/navbar/navbar__link--hover.scss';
+import '../styles/header/navbar/navbar__link--focus.scss';
+import '../styles/header/navbar/navbar__link--active.scss';
 
 type NavBarProps = {
     menuItem: { title: string, link: URL }[];

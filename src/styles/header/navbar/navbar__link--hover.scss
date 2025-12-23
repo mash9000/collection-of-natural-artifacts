@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../variables' as variables;
+@use '../../variables' as variables;
 
 .navbar__link--hover:hover {
     color: map.get(variables.$mainColors, 'primary_green');
