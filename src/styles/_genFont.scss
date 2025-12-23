@@ -1,0 +1,16 @@
+@mixin generateFont($type) {
+  @if ($type == 'navbar') {
+    font: {
+      family: 'Open Sans', sans-serif;
+      weight: 400;
+      size: 16px;
+    }
+    color: #fff;
+    text: {
+      decoration: none;
+      align: center;
+    }
+  } @else {
+    @error 'неверный набор свойств шрифта (#{$type})';
+  }
+}

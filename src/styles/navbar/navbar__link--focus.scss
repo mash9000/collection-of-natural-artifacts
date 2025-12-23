@@ -1,0 +1,7 @@
+@use 'sass:map';
+@use '../variables' as variables;
+
+.navbar__link--focus:focus {
+  box-sizing: border-box;
+  outline: 1px solid map.get(variables.$mainColors, 'green_focus');
+}

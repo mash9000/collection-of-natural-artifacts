@@ -1,0 +1,13 @@
+@use 'sass:map';
+@use '../variables' as variables;
+
+.navbar {
+  // TODO: временно
+  width: 500px;
+
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: map.get(variables.$mainColors, 'bgColor');
+}

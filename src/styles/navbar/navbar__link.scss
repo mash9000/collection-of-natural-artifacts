@@ -1,0 +1,7 @@
+@use 'sass:map';
+@use '../genFont' as genFont;
+
+.navbar__link {
+  padding: 1px 7px;
+  @include genFont.generateFont('navbar');
+}
