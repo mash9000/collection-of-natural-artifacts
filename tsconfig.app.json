@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "types": ["vite/client"],
+
+    /* Liked settings */
+    "allowUnreachableCode": false,      // "вывод всех ошибок"
+    "alwaysStrict": true,               // всегда строгий режим
+    "exactOptionalPropertyTypes": true, // защита от непредвиденных undefined
+    "noFallthroughCasesInSwitch": true, // в switch контролируется указание break, return или throw
+    "noImplicitOverride": true,         // сохраняется наследование методов
+    "noImplicitReturns": true,          // проверяется возвращаемое значение
+    "noUnusedLocals": true,             // указать, если локальная переменная не используется
+    "noUnusedParameters": true,         // указать, если параметр функции не используется
+    "allowJs": true,                    // разрешить импорт JS-файлов
+    "checkJs": true,                    // контроль ошибок в импортируемых JS-файлах
+    "esModuleInterop": true,            // помогает устранить некоторые противоречия между CommonJS и ES-модулями
+    "skipLibCheck": true,               // пропускает проверку типов файлов .d.ts
+    "target": "es2022",
+    "resolveJsonModule": true,          // заставляет TypeScript рассматривать все файлы как модули. Помогает избежать ошибок типа "cannot redeclare block-scoped variable"
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "noUncheckedIndexedAccess": true,    // запрещает обращаться к массиву или объекту, не проверив предварительно, определён ли он
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "erasableSyntaxOnly": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src"]
+}
