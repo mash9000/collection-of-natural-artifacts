@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+  height: 490px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(29 47 48/ 70%)), url(./wrapper.webp) center/cover no-repeat;
+
+  & > div {
+    width: 90%;
+    max-width: 1110px;
+  }
+}

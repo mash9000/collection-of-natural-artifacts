@@ -1,8 +1,8 @@
 import {NavBar} from "./NavBar.tsx";
 import {Logo} from "./Logo.tsx";
 import {SearchAndLoginPanel} from "./SearchAndLoginPanel.tsx";
-import '../styles/header/header.scss';
-import '../styles/header/header--adaptive.scss';
+import '../../styles/header/header.scss';
+import '../../styles/header/header--adaptive.scss';
 
 type HeaderProps = {
     menuItem: { title: string, link: URL }[];

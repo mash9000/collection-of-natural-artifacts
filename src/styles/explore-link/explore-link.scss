@@ -1,0 +1,10 @@
+@use '../genFont' as genFont;
+
+.explore-link {
+  display: inline-block;
+  width: 160px;
+  height: 23px;
+  @include genFont.generateFont('explore-btn');
+  background: url(./arrow-right.svg) right center no-repeat;
+  background-size: 43px auto;
+}

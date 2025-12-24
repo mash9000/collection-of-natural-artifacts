@@ -1,0 +1,22 @@
+.wrapper--adaptive {
+  container-type: inline-size;
+  container-name: wrapper;
+}
+
+@container wrapper (max-width: 688px) {
+  .wrapper__heading {
+    width: 256px;
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
+  .wrapper__description {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 688px) {
+  .wrapper {
+    height: 344px;
+  }
+}

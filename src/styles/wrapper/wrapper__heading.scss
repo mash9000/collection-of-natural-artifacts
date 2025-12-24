@@ -1,0 +1,7 @@
+@use '../genFont' as genFont;
+
+.wrapper__heading {
+  @include genFont.generateFont('wrapper-heading');
+  width: 688px;
+  margin-bottom: 16px;
+}

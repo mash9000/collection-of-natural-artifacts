@@ -1,4 +1,4 @@
-import '../styles/header/logo/logo.scss';
+import '../../styles/header/logo/logo.scss';
 
 export const Logo = () => {
     return (

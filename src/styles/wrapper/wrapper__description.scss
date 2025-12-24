@@ -1,0 +1,7 @@
+@use '../genFont' as genFont;
+
+.wrapper__description {
+  @include genFont.generateFont('wrapper-description');
+  width: 630px;
+  margin-bottom: 24px;
+}

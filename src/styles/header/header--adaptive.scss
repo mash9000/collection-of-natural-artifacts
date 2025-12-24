@@ -3,6 +3,16 @@
   container-name: header;
 }
 
+@container header (max-width: 1110px) {
+  .logo {
+    margin-left: 5%;
+  }
+
+  .search-and-login-panel {
+    margin-right: 5%;
+  }
+}
+
 @container header (max-width: 700px) {
   .header > div {
     margin-top: calc(calc(60px - 24px) / 2);

@@ -1,3 +1,8 @@
+@use 'sass:map';
+@use './variables' as variables;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 @mixin generateFont($type) {
   @if ($type == 'navbar') {
     font: {
@@ -5,11 +10,37 @@
       weight: 400;
       size: 16px;
     }
-    color: #fff;
+    color: map.get(variables.$mainColors, 'white');
     text: {
       decoration: none;
       align: center;
     }
+  } @else if ($type == 'explore-btn') {
+    font: {
+      family: 'Open Sans', sans-serif;
+      weight: 700;
+      size: 16px;
+    }
+    color: map.get(variables.$mainColors, 'primary_green');
+    text-decoration: none;
+    line-height: 23px;
+  } @else if ($type == 'wrapper-heading') {
+    font: {
+      family: "Cormorant", serif;
+      optical-sizing: auto;
+      weight: 700;
+      style: normal;
+      size: 60px;
+    }
+    color: map.get(variables.$otherColors, 'wrapperHeadingColor');
+  } @else if ($type == 'wrapper-description') {
+    font: {
+      family: 'Open Sans', sans-serif;
+      weight: 400;
+      size: 16px;
+    }
+    color: map.get(variables.$otherColors, 'wrapperDescriptiongColor');
+    line-height: 150%;
   } @else {
     @error 'неверный набор свойств шрифта (#{$type})';
   }
