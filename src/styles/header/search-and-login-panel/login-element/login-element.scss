@@ -1,5 +1,7 @@
 .login-element {
   width: 24px;
-
-  background-color: crimson;
+  height: 24px;
+  box-sizing: border-box;
+  padding: 5px;
+  background: url(./login/login-static.svg) no-repeat;
 }
