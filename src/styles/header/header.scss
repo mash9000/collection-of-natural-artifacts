@@ -7,7 +7,7 @@
   background-color: map.get(variables.$mainColors, 'bgColor');
 
   & > div {
-    width: 1110px;
+    max-width: 1110px;
     display: flex;
     align-items: center;
     justify-content: space-between;
