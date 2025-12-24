@@ -1,0 +1,6 @@
+@use 'sass:map';
+@use '../../../variables' as variables;
+
+.login-element--focus:focus {
+  outline: 1px solid map.get(variables.$mainColors, 'green_focus');
+}
