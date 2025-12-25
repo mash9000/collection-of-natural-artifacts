@@ -10,7 +10,7 @@
       weight: 400;
       size: 16px;
     }
-    color: map.get(variables.$mainColors, 'white');
+    color: map.get(variables.$mainColors, 'linkColor');
     text: {
       decoration: none;
       align: center;
