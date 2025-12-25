@@ -41,6 +41,38 @@
     }
     color: map.get(variables.$otherColors, 'wrapperDescriptiongColor');
     line-height: 150%;
+  } @else if ($type == 'more-detailed-btn') {
+    font: {
+      family: 'Open Sans', sans-serif;
+      weight: 400;
+      size: 16px;
+    }
+    color: map.get(variables.$mainColors, 'primary_green');
+  } @else if ($type == 'artifact-card-heading') {
+    font: {
+      family: 'Cormorant', sans-serif;
+      weight: 700;
+      size: 24px;
+    }
+    line-height: 150%;
+    color: map.get(variables.$mainColors, 'linkColor');
+  } @else if ($type == 'artifact-card-description') {
+    font: {
+      family: 'Open Sans', sans-serif;
+      weight: 400;
+      size: 16px;
+    }
+    line-height: 150%;
+    color: map.get(variables.$mainColors, 'greyColor');
+  } @else if ($type == 'artifact-card-rate') {
+    font: {
+      family: 'Cormorant', sans-serif;
+      weight: 700;
+      size: 16px;
+    }
+    line-height: 17px;
+    text-align: center;
+    color: map.get(variables.$mainColors, 'greyColor');
   } @else {
     @error 'неверный набор свойств шрифта (#{$type})';
   }

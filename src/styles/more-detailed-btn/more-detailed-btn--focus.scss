@@ -1,0 +1,7 @@
+@use 'sass:map';
+@use '../variables' as variables;
+
+.more-detailed-btn--focus:focus {
+  outline: 1px solid map.get(variables.$mainColors, 'primary_green');
+  outline-offset: 3px;
+}

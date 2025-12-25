@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use '../variables' as variables;
+
+.artifact-card__image-container {
+  width: 255px;
+  height: 180px;
+  background: map.get(variables.$mainColors, 'bgShade');
+  position: relative;
+  margin-bottom: 16px;
+}

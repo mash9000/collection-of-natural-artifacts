@@ -1,0 +1,7 @@
+@use 'sass:map';
+@use '../variables' as variables;
+
+.more-detailed-btn--active:active {
+  color: map.get(variables.$mainColors, 'bgShade');
+  background: map.get(variables.$mainColors, 'green_active');
+}

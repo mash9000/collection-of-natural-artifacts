@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use '../variables' as variables;
+@use '../genFont' as genFont;
+
+.artifact-card__rate {
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  border: 1px solid map.get(variables.$mainColors, 'greyColor');
+  border-radius: 12px;
+  @include genFont.generateFont('artifact-card-rate');
+  position: relative;
+  top: 16px;
+  left: 16px;
+}

@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use '../variables' as variables;
+@use '../genFont' as genFont;
+
+.artifact-card__description {
+  width: 223px;
+  margin: 0 auto;
+
+  & > h3 {
+    height: 36px;
+    @include genFont.generateFont('artifact-card-heading');
+    margin-bottom: 8px;
+  }
+
+  & > p {
+    height: 168px;
+    @include genFont.generateFont('artifact-card-description');
+    margin-bottom: 16px;
+  }
+}

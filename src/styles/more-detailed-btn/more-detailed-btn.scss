@@ -1,0 +1,13 @@
+@use 'sass:map';
+@use '../variables' as variables;
+@use '../genFont' as genFont;
+
+.more-detailed-btn {
+  width: 145px;
+  height: 45px;
+  box-sizing: border-box;
+  border: 1px solid map.get(variables.$mainColors, 'primary_green');
+  background: none;
+  @include genFont.generateFont('more-detailed-btn');
+  margin-left: 16px;
+}
