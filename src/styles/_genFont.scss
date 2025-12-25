@@ -73,6 +73,15 @@
     line-height: 17px;
     text-align: center;
     color: map.get(variables.$mainColors, 'greyColor');
+  } @else if ($type == 'view-artifact-cards') {
+    font: {
+      family: 'Cormorant', sans-serif;
+      weight: 700;
+      size: 24px;
+    }
+    white-space: nowrap;
+    line-height: 36px;
+    color: map.get(variables.$mainColors, 'linkColor');
   } @else {
     @error 'неверный набор свойств шрифта (#{$type})';
   }

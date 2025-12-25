@@ -1,0 +1,10 @@
+.carousel {
+  width: 1110px;
+  height: 555px;
+  margin: 60px auto 0;
+
+  & > div {
+    display: flex;
+    gap: 30px;
+  }
+}

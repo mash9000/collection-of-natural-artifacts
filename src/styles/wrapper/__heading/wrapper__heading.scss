@@ -1,4 +1,4 @@
-@use '../genFont' as genFont;
+@use '../../genFont' as genFont;
 
 .wrapper__heading {
   @include genFont.generateFont('wrapper-heading');

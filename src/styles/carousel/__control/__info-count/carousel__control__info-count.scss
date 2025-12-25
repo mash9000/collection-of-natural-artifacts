@@ -1,0 +1,8 @@
+@use 'sass:map';
+@use '../../../genFont' as genFont;
+
+.carousel__control__info-count {
+  width: 51px;
+  height: inherit;
+  @include genFont.generateFont('view-artifact-cards');
+}

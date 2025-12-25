@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use '../variables' as variables;
-@use '../genFont' as genFont;
+@use '../../variables' as variables;
+@use '../../genFont' as genFont;
 
 .artifact-card__description {
   width: 223px;
@@ -13,7 +13,13 @@
   }
 
   & > p {
-    height: 168px;
+    width: inherit;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
     @include genFont.generateFont('artifact-card-description');
     margin-bottom: 16px;
   }

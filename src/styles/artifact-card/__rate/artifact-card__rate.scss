@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use '../variables' as variables;
-@use '../genFont' as genFont;
+@use '../../variables' as variables;
+@use '../../genFont' as genFont;
 
 .artifact-card__rate {
   width: 24px;

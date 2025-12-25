@@ -1,0 +1,7 @@
+@use 'sass:map';
+@use '../../../variables' as variables;
+
+.carousel__control__button--focus:focus {
+  outline: 1px solid map.get(variables.$mainColors, 'green_focus');
+  outline-offset: 5px;
+}
