@@ -1,7 +1,11 @@
+import '../../styles/artifact-card/__rate/artifact-card__rate.scss';
 import '../../styles/map-of-new-artifacts/map-of-new-artifacts.scss';
 import '../../styles/map-of-new-artifacts/__heading/map-of-new-artifacts__heading.scss';
 import '../../styles/map-of-new-artifacts/__description-block/map-of-new-artifacts__description-block.scss';
 import '../../styles/map-of-new-artifacts/__description-block/__heading/map-of-new-artifacts__description-block__heading.scss';
+import '../../styles/map-of-new-artifacts/__map-with-artifacts/map-of-new-artifacts__map-with-artifacts.scss';
+import '../../styles/map-of-new-artifacts/__map-with-artifacts/__img/map-of-new-artifacts__map-with-artifacts__img--example-5.scss';
+import '../../styles/map-of-new-artifacts/__map-with-artifacts/__rate/map-of-new-artifacts__map-with-artifacts__rate--rate-1.scss';
 
 import {ReadMore} from "./ReadMore.tsx";
 
@@ -10,22 +14,8 @@ export const MapOfNewArtifacts = () => {
         <div className="map-of-new-artifacts">
             <h2 className='map-of-new-artifacts__heading'>Новые артефакты</h2>
             <div className='map-of-new-artifacts__map-with-artifacts'>
-                <img src='./for-artifact-card/example-5.webp' alt='example-5'/>
-                <img src='./for-artifact-card/example-6.webp' alt='example-6'/>
-                <img src='./for-artifact-card/example-7.webp' alt='example-7'/>
-                <img src='./for-artifact-card/example-8.webp' alt='example-8'/>
-                <img src='./for-artifact-card/example-9.webp' alt='example-9'/>
-                <img src='./for-artifact-card/example-10.webp'
-                     alt='example-10'/>
-                <img src='./for-artifact-card/example-11.webp'
-                     alt='example-11'/>
-                <p className=''>5.3</p>
-                <p className=''>1.6</p>
-                <p className=''>6.3</p>
-                <p className=''>6.2</p>
-                <p className=''>9.1</p>
-                <p className=''>1.1</p>
-                <p className=''>2.6</p>
+                <img className='map-of-new-artifacts__map-with-artifacts__img--example-5' src='./for-artifact-card/example-5.webp' alt='example-5'/>
+                <p className='artifact-card__rate map-of-new-artifacts__map-with-artifacts__rate--rate-1'>5.3</p>
             </div>
             <div className='map-of-new-artifacts__description-block'>
                 <h5 className='map-of-new-artifacts__description-block__heading'>Kurische

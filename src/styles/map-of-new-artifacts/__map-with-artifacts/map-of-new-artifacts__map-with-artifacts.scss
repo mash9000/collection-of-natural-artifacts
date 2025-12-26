@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use '../../variables' as variables;
+
+.map-of-new-artifacts__map-with-artifacts {
+  display: grid;
+  grid-template: repeat(20, calc(493px / 20)) / repeat(20, calc(825px / 20));
+  box-sizing: border-box;
+  padding: 16px;
+  background: map.get(variables.$mainColors, 'bgShade');
+}
