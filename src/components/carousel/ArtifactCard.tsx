@@ -4,7 +4,7 @@ import '../../styles/artifact-card/__image-container/__image/artifact-card__imag
 import '../../styles/artifact-card/__description/artifact-card__description.scss';
 import '../../styles/artifact-card/__rate/artifact-card__rate.scss';
 
-import {MoreDetailedBtn} from "../MoreDetailedBtn.tsx";
+import {MoreDetailedBtn} from "./MoreDetailedBtn.tsx";
 import type {ArtifactCardData} from "../../props-interfaces/ArtifactCardData.ts";
 
 export const ArtifactCard = (props: ArtifactCardData) => {
