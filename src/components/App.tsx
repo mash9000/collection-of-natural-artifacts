@@ -4,6 +4,7 @@ import {Carousel} from "./carousel/Carousel.tsx";
 import {navBarMenuItems} from "../data/NavBarData.ts";
 import {wrapperData} from "../data/WrapperData.ts";
 import {artifactCards} from "../data/ArtifactCardsData.ts";
+import {MapOfNewArtifacts} from "./map-of-new-artifacts/MapOfNewArtifacts.tsx";
 
 export const App = () => {
 
@@ -12,6 +13,7 @@ export const App = () => {
             <Header menuItem={navBarMenuItems}/>
             <Wrapper {...wrapperData}/>
             <Carousel listOfArtifactCards={artifactCards}/>
+            <MapOfNewArtifacts/>
         </>
     )
 }

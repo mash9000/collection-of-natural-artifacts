@@ -1,4 +1,7 @@
 import '../../styles/map-of-new-artifacts/map-of-new-artifacts.scss';
+import '../../styles/map-of-new-artifacts/__heading/map-of-new-artifacts__heading.scss';
+import '../../styles/map-of-new-artifacts/__description-block/map-of-new-artifacts__description-block.scss';
+import '../../styles/map-of-new-artifacts/__description-block/__heading/map-of-new-artifacts__description-block__heading.scss';
 
 import {ReadMore} from "./ReadMore.tsx";
 
@@ -12,8 +15,10 @@ export const MapOfNewArtifacts = () => {
                 <img src='./for-artifact-card/example-7.webp' alt='example-7'/>
                 <img src='./for-artifact-card/example-8.webp' alt='example-8'/>
                 <img src='./for-artifact-card/example-9.webp' alt='example-9'/>
-                <img src='./for-artifact-card/example-10.webp' alt='example-10'/>
-                <img src='./for-artifact-card/example-11.webp' alt='example-11'/>
+                <img src='./for-artifact-card/example-10.webp'
+                     alt='example-10'/>
+                <img src='./for-artifact-card/example-11.webp'
+                     alt='example-11'/>
                 <p className=''>5.3</p>
                 <p className=''>1.6</p>
                 <p className=''>6.3</p>
