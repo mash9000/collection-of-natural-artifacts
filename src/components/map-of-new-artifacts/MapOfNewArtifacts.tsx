@@ -1,4 +1,5 @@
-import '../styles/mapOfNewArtifacts/mapOfNewArtifacts.scss';
+import '../../styles/map-of-new-artifacts/map-of-new-artifacts.scss';
+
 import {ReadMore} from "./ReadMore.tsx";
 
 export const MapOfNewArtifacts = () => {
@@ -22,8 +23,14 @@ export const MapOfNewArtifacts = () => {
                 <p className=''>2.6</p>
             </div>
             <div className='map-of-new-artifacts__description-block'>
-                <h5 className='map-of-new-artifacts__description-block__heading'></h5>
-                <p className='map-of-new-artifacts__description-block__paragraph'></p>
+                <h5 className='map-of-new-artifacts__description-block__heading'>Kurische
+                    Nehrung 24</h5>
+                <p className='map-of-new-artifacts__description-block__paragraph'>Вот
+                    вам яркий пример современных тенденций - начало повседневной
+                    работы по формированию позиции выявляет срочную потребность
+                    методов управления процессами.
+                    Есть над чем задуматься: представители современных
+                    социальных резервов своевременно верифицированы.</p>
                 <ReadMore/>
             </div>
         </div>
