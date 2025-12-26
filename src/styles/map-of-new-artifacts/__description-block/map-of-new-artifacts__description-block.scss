@@ -1,6 +1,12 @@
+@use 'sass:map';
+@use '../../variables' as variables;
+
 .map-of-new-artifacts__description-block {
+  width: 287px;
+  height: 525px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   padding: 16px;
+  background: map.get(variables.$mainColors, 'primary_green');
 }
