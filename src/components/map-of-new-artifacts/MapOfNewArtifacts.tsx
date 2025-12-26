@@ -5,6 +5,7 @@ import '../../styles/map-of-new-artifacts/__description-block/map-of-new-artifac
 import '../../styles/map-of-new-artifacts/__description-block/__heading/map-of-new-artifacts__description-block__heading.scss';
 import '../../styles/map-of-new-artifacts/__map-with-artifacts/map-of-new-artifacts__map-with-artifacts.scss';
 import '../../styles/map-of-new-artifacts/__map-with-artifacts/__img/map-of-new-artifacts__map-with-artifacts__img--example-5.scss';
+import '../../styles/map-of-new-artifacts/__map-with-artifacts/__img/map-of-new-artifacts__map-with-artifacts__img--example-6.scss';
 import '../../styles/map-of-new-artifacts/__map-with-artifacts/__img/map-of-new-artifacts__map-with-artifacts__img--example-7.scss';
 import '../../styles/map-of-new-artifacts/__map-with-artifacts/__img/map-of-new-artifacts__map-with-artifacts__img--example-8.scss';
 import '../../styles/map-of-new-artifacts/__map-with-artifacts/__img/map-of-new-artifacts__map-with-artifacts__img--example-9.scss';
@@ -16,6 +17,7 @@ import '../../styles/map-of-new-artifacts/__map-with-artifacts/__rate/map-of-new
 import '../../styles/map-of-new-artifacts/__map-with-artifacts/__rate/map-of-new-artifacts__map-with-artifacts__rate--rate-4.scss';
 import '../../styles/map-of-new-artifacts/__map-with-artifacts/__rate/map-of-new-artifacts__map-with-artifacts__rate--rate-5.scss';
 import '../../styles/map-of-new-artifacts/__map-with-artifacts/__rate/map-of-new-artifacts__map-with-artifacts__rate--rate-6.scss';
+import '../../styles/map-of-new-artifacts/__map-with-artifacts/__rate/map-of-new-artifacts__map-with-artifacts__rate--rate-7.scss';
 
 import {ReadMore} from "./ReadMore.tsx";
 
@@ -25,6 +27,7 @@ export const MapOfNewArtifacts = () => {
             <h2 className='map-of-new-artifacts__heading'>Новые артефакты</h2>
             <div className='map-of-new-artifacts__map-with-artifacts'>
                 <img className='map-of-new-artifacts__map-with-artifacts__img--example-5' src='./for-artifact-card/example-5.webp' alt='example-5'/>
+                <img className='map-of-new-artifacts__map-with-artifacts__img--example-6' src='./for-artifact-card/example-6.webp' alt='example-6'/>
                 <img className='map-of-new-artifacts__map-with-artifacts__img--example-7' src='./for-artifact-card/example-7.webp' alt='example-7'/>
                 <img className='map-of-new-artifacts__map-with-artifacts__img--example-8' src='./for-artifact-card/example-8.webp' alt='example-8'/>
                 <img className='map-of-new-artifacts__map-with-artifacts__img--example-9' src='./for-artifact-card/example-9.webp' alt='example-9'/>
@@ -36,6 +39,7 @@ export const MapOfNewArtifacts = () => {
                 <p className='artifact-card__rate map-of-new-artifacts__map-with-artifacts__rate--rate-4'>9.3</p>
                 <p className='artifact-card__rate map-of-new-artifacts__map-with-artifacts__rate--rate-5'>5.2</p>
                 <p className='artifact-card__rate map-of-new-artifacts__map-with-artifacts__rate--rate-6'>9.2</p>
+                <p className='artifact-card__rate map-of-new-artifacts__map-with-artifacts__rate--rate-7'>3.2</p>
             </div>
             <div className='map-of-new-artifacts__description-block'>
                 <h5 className='map-of-new-artifacts__description-block__heading'>Kurische
