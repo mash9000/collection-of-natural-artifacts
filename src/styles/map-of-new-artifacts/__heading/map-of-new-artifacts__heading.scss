@@ -1,4 +1,7 @@
+@use '../../genFont' as genFont;
+
 .map-of-new-artifacts__heading {
   grid-column: 1/3;
   align-self: center;
+  @include genFont.generateFont('title-of-description-of-new-artifacts');
 }

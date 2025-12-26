@@ -12,7 +12,7 @@
     }
     color: map.get(variables.$mainColors, 'linkColor');
     text: {
-      decoration: none;
+      decoration-line: none;
       align: center;
     }
   } @else if ($type == 'explore-btn') {
@@ -82,7 +82,15 @@
     white-space: nowrap;
     line-height: 36px;
     color: map.get(variables.$mainColors, 'linkColor');
-  } @else {
+  } @else if ($type == 'title-of-description-of-new-artifacts') {
+    font: {
+      family: 'Cormorant', sans-serif;
+      weight: 700;
+      size: 48px;
+      style: italic;
+    }
+    color: map.get(variables.$mainColors, 'linkColor');
+  }@else {
     @error 'неверный набор свойств шрифта (#{$type})';
   }
 }
