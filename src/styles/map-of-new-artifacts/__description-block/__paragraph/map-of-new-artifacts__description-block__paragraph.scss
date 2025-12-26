@@ -1,0 +1,9 @@
+@use 'sass:map';
+@use '../../../genFont' as genFont;
+@use '../../../variables' as variables;
+
+.map-of-new-artifacts__description-block__paragraph {
+  @include genFont.generateFont('artifact-card-description');
+  color: map.get(variables.$mainColors, 'green_text');
+  margin-bottom: 24px;
+}
