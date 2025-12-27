@@ -1,25 +1,13 @@
 import {Header} from "./header/Header.tsx";
 import {Wrapper} from "./wrapper/Wrapper.tsx";
-import type {WrapperData} from "../props-interfaces/WrapperData.ts";
 import type {ArtifactCardData} from "../props-interfaces/ArtifactCardData.ts";
 import {Carousel} from "./carousel/Carousel.tsx";
+import {
+    navbarMenuItems
+} from "../model/model-implementation/data/NavbarMenuItems.ts";
+import {dataWrapper} from "../model/model-implementation/data/DataWrapper.ts";
 
 export const App = () => {
-    const navBarMenuItems: { title: string, link: URL }[] = [
-        {title: 'Каталог', link: new URL('https://ya.ru/')},
-        {title: 'Галерея', link: new URL('https://ya.ru/')},
-        {title: 'О лаборатории', link: new URL('https://ya.ru/')},
-        {title: 'Контакты', link: new URL('https://ya.ru/')},
-    ]
-
-    const wrapperData: WrapperData = {
-        heading: 'Крупнейшая коллекция природных артефактов',
-        description: 'Являясь всего лишь частью общей картины, интерактивные ' +
-            'прототипы, которые представляют собой яркий пример европейского ' +
-            'типа политической и социальной культуры.',
-        link: new URL('https://ya.ru/')
-    }
-
     const artifactCards: ArtifactCardData[] = [
         {
             imageName: 'example-1',
@@ -136,7 +124,7 @@ export const App = () => {
         },
         {
             imageName: 'example-3',
-            rate: 4.0,
+            rate: 4.5,
             heading: 'Fig. 15 (island)',
             description: 'Важным аспектом является необходимость учёта' +
                 ' региональных особенностей при разработке стратегий что ' +
@@ -203,8 +191,8 @@ export const App = () => {
 
     return (
         <>
-            <Header menuItem={navBarMenuItems}/>
-            <Wrapper {...wrapperData}/>
+            <Header menuItem={navbarMenuItems.getItems()}/>
+            <Wrapper dataWrapper={dataWrapper}/>
             <Carousel listOfArtifactCards={artifactCards}/>
         </>
     )

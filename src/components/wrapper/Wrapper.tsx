@@ -3,15 +3,19 @@ import '../../styles/wrapper/__heading/wrapper__heading.scss';
 import '../../styles/wrapper/__description/wrapper__description.scss';
 import '../../styles/wrapper/wrapper--adaptive.scss';
 import {ExploreLInk} from "./ExploreLInk.tsx";
-import type {WrapperData} from "../../props-interfaces/WrapperData.ts";
+import type {IBannerData} from "../../model/IBannerData.ts";
 
-export const Wrapper = (props: WrapperData) => {
+type WrapperProps = {
+    dataWrapper: IBannerData;
+}
+
+export const Wrapper = ({dataWrapper}: WrapperProps) => {
     return (
         <div className='wrapper wrapper--adaptive'>
             <div>
-                <h1 className='wrapper__heading'>{props.heading}</h1>
-                <p className='wrapper__description'>{props.description}</p>
-                <ExploreLInk url={props.link}/>
+                <h1 className='wrapper__heading'>{dataWrapper.getTitle()}</h1>
+                <p className='wrapper__description'>{dataWrapper.getDescription()}</p>
+                <ExploreLInk url={dataWrapper.getUrl()}/>
             </div>
         </div>
     );

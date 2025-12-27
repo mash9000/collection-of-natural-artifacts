@@ -1,12 +1,12 @@
-import type {IMenuItemsInTheNavBar} from "../model/IMenuItemsInTheNavBar.ts";
-import {ErrorCreatingMenuItems} from "../model/ErrorCreatingMenuItems.ts";
-import {AppConfig} from "../model/AppConfig.ts";
+import type {IMenuItemsInTheNavBar} from "../IMenuItemsInTheNavBar.ts";
+import {ErrorCreatingMenuItems} from "../ErrorCreatingMenuItems.ts";
+import {AppConfig} from "../AppConfig.ts";
 
 export class ExampleOfMenuItems implements IMenuItemsInTheNavBar {
-    constructor(private readonly menuItems: string[]) {
+    constructor(private readonly menuItems: { title: string, link: URL }[]) {
     }
 
-    getItems(): string[] {
+    getItems(): { title: string, link: URL }[] {
         this.checkTheArray();
 
         this.trimExcessCharactersFromMenuItems();
@@ -23,6 +23,6 @@ export class ExampleOfMenuItems implements IMenuItemsInTheNavBar {
     }
 
     private trimExcessCharactersFromMenuItems(): void {
-        this.menuItems.forEach((menuItem: string): string => menuItem.substring(0, AppConfig.getTheMaximumLengthOfTheMenuItemString()));
+        this.menuItems.forEach((menuItem: { title: string, link: URL }): string => menuItem.title.substring(0, AppConfig.getTheMaximumLengthOfTheMenuItemString()));
     }
 }

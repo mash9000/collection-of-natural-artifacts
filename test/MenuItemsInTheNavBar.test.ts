@@ -2,16 +2,36 @@ import {describe, expect, test} from "vitest";
 import {AppConfig} from "../src/model/AppConfig";
 import {IMenuItemsInTheNavBar} from "../src/model/IMenuItemsInTheNavBar";
 import {ErrorCreatingMenuItems} from "../src/model/ErrorCreatingMenuItems";
-import {ExampleOfMenuItems} from "../src/data/ExampleOfMenuItems";
+import {ExampleOfMenuItems} from "../src/model/model-implementation/ExampleOfMenuItems";
 
 const getSamplesOfTheIMenuItemsInTheNavBarInterface = (): IMenuItemsInTheNavBar[] => {
     return [
         new ExampleOfMenuItems([]),
-        new ExampleOfMenuItems(['Контакты']),
-        new ExampleOfMenuItems(['Контакты', 'Лаборатория']),
-        new ExampleOfMenuItems(['Контакты', 'Лаборатория', 'Артефакты']),
-        new ExampleOfMenuItems(['Контакты', 'Лаборатория', 'Артефакты', 'Связь']),
-        new ExampleOfMenuItems(['Контакты', 'Лаборатория', 'Артефакты', 'Связь', 'Бред сивой кобылы']),
+        new ExampleOfMenuItems([
+            {title: 'Контакты', link: new URL('https://ya.ru')}
+        ]),
+        new ExampleOfMenuItems([
+            {title: 'Контакты', link: new URL('https://ya.ru')},
+            {title: 'Лаборатория', link: new URL('https://ya.ru')}
+        ]),
+        new ExampleOfMenuItems([
+            {title: 'Контакты', link: new URL('https://ya.ru')},
+            {title: 'Лаборатория', link: new URL('https://ya.ru')},
+            {title: 'Артефакты', link: new URL('https://ya.ru')}
+        ]),
+        new ExampleOfMenuItems([
+            {title: 'Контакты', link: new URL('https://ya.ru')},
+            {title: 'Лаборатория', link: new URL('https://ya.ru')},
+            {title: 'Артефакты', link: new URL('https://ya.ru')},
+            {title: 'Связь', link: new URL('https://ya.ru')}
+        ]),
+        new ExampleOfMenuItems([
+            {title: 'Контакты', link: new URL('https://ya.ru')},
+            {title: 'Лаборатория', link: new URL('https://ya.ru')},
+            {title: 'Артефакты', link: new URL('https://ya.ru')},
+            {title: 'Связь', link: new URL('https://ya.ru')},
+            {title: 'Бред сивой кобылы', link: new URL('https://ya.ru')}
+        ])
     ];
 }
 
@@ -34,9 +54,9 @@ describe('Проверка пунктов меню', () => {
     describe('Пункты меню в нормальном виде', () => {
         test.each(getSamplesOfTheIMenuItemsInTheNavBarInterface().slice(2, 5))('Обработка пункта "%s"', (array: IMenuItemsInTheNavBar) => {
             const pattern = /^\s+$/g;
-            array.getItems().map((item: string) => {
-                expect.soft(pattern.test(item)).toBeFalsy();
-                expect.soft(item.length).toBeLessThanOrEqual(AppConfig.getTheMaximumLengthOfTheMenuItemString());
+            array.getItems().map((item: { title: string, link: URL }) => {
+                expect.soft(pattern.test(item.title)).toBeFalsy();
+                expect.soft(item.title.length).toBeLessThanOrEqual(AppConfig.getTheMaximumLengthOfTheMenuItemString());
             });
         });
     })

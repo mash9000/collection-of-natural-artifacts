@@ -8,12 +8,12 @@ type HeaderProps = {
     menuItem: { title: string, link: URL }[];
 }
 
-export const Header = (props: HeaderProps) => {
+export const Header = ({menuItem}: HeaderProps) => {
     return (
         <header className='header header--adaptive'>
             <div>
                 <Logo/>
-                <NavBar menuItem={props.menuItem}/>
+                <NavBar menuItem={menuItem}/>
                 <SearchAndLoginPanel/>
             </div>
         </header>

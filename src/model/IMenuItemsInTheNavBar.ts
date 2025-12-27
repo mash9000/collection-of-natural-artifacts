@@ -1,3 +1,3 @@
 export interface IMenuItemsInTheNavBar {
-    getItems(): string[];
+    getItems(): { title: string, link: URL }[];
 }

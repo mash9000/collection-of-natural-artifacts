@@ -1,10 +1,11 @@
-import type {IBannerData} from "../model/IBannerData.ts";
-import {AppConfig} from "../model/AppConfig.ts";
-import {ErrorCreatingBanner} from "../model/ErrorCreatingBanner.ts";
+import type {IBannerData} from "../IBannerData.ts";
+import {AppConfig} from "../AppConfig.ts";
+import {ErrorCreatingBanner} from "../ErrorCreatingBanner.ts";
 
 export class ExampleOfBannerData implements IBannerData {
     constructor(private readonly title: string,
-                private readonly description: string) {
+                private readonly description: string,
+                private readonly link: URL) {
     }
 
     getDescription(): string {
@@ -25,5 +26,9 @@ export class ExampleOfBannerData implements IBannerData {
     private verifyTheHeader() {
         if (this.title.length < AppConfig.getTheMinimumLengthOfTheBannerHeaderString())
             throw new ErrorCreatingBanner(`minimum length of the header string - ${AppConfig.getTheMinimumLengthOfTheBannerHeaderString()}`);
+    }
+
+    public getUrl(): URL {
+        return this.link;
     }
 }
