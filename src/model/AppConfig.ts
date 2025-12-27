@@ -1,9 +1,9 @@
 export class AppConfig {
-    public static takeTheMinimumNumberOfMenuItems(): number {
-        return 1;
+    public static getTheMinimumNumberOfMenuItems(): number {
+        return 2;
     }
 
-    public static takeTheMaximumNumberOfMenuItems(): number {
+    public static getTheMaximumNumberOfMenuItems(): number {
         return 4;
     }
 
