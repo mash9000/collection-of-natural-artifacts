@@ -3,6 +3,7 @@ import {AppConfig} from "../src/model/AppConfig";
 import {IMenuItemsInTheNavBar} from "../src/model/IMenuItemsInTheNavBar";
 import {ErrorCreatingMenuItems} from "../src/model/ErrorCreatingMenuItems";
 import {ExampleOfMenuItems} from "../src/data/ExampleOfMenuItems";
+import {IBannerData} from "../src/model/IBannerData";
 
 const getSamplesOfTheIMenuItemsInTheNavBarInterface = (): IMenuItemsInTheNavBar[] => {
     return [
@@ -42,45 +43,23 @@ describe('Проверка пунктов меню', () => {
     })
 });
 
-// describe('Check wrapper data', () => {
-//     const examplesOfBannerData: IBannerData[] = [
-//         {
-//             getTitle: () => 'Наименование баннера',
-//             getDescription: () => 'случайный набор букв'
-//         },
-//         {
-//             getTitle: () => 'Н',
-//             getDescription: () => 'случайный набор букв'
-//         },
-//         {
-//             getTitle: () => 'Наименование баннера',
-//             getDescription: () => 'с'
-//         },
-//         {
-//             getTitle: () => 'Наименование баннера  djgsksjdhgkjdfhgsdfkjgdfjklghvlgjhdkjsfhg',
-//             getDescription: () => 'случайный набор букв'
-//         },
-//         {
-//             getTitle: () => '',
-//             getDescription: () => ''
-//         },
-//         {
-//             getTitle: () => ' ',
-//             getDescription: () => ' '
-//         },
-//     ];
-//     test('Заголовок и описание баннера в порядке', () => {
-//         const pattern = /^\s+$/g;
-//         expect.soft(() => examplesOfBannerData[0].getTitle()).not.toThrowError();
-//         expect.soft(() => examplesOfBannerData[0].getDescription()).not.toThrowError();
-//         expect.soft(() => examplesOfBannerData[1].getTitle()).not.toThrowError();
-//         expect.soft(() => examplesOfBannerData[1].getDescription()).not.toThrowError();
-//         expect.soft(() => examplesOfBannerData[2].getTitle()).not.toThrowError();
-//         expect.soft(() => examplesOfBannerData[2].getDescription()).not.toThrowError(new ErrorCreatingBanner(`minimum number of characters in the banner description - ${AppConfig.MIN_LENGTH_WRAPPER_DESCRIPTION}`));
-//         expect.soft(() => examplesOfBannerData[3].getTitle()).toThrowError(new ErrorCreatingBanner(`maximum number of characters in the banner title - ${AppConfig.MAX_LENGTH_WRAPPER_TITLE}`));
-//         expect.soft(() => pattern.test(examplesOfBannerData[4].getTitle())).toThrowError(new ErrorCreatingBanner('The banner title consists of space characters.'));
-//         expect.soft(() => pattern.test(examplesOfBannerData[4].getDescription())).not.toThrowError(new ErrorCreatingBanner('The banner description consists of space characters.'));
-//         expect.soft(() => pattern.test(examplesOfBannerData[5].getTitle())).toThrowError(new ErrorCreatingBanner('The banner title consists of space characters.'));
-//         expect.soft(() => pattern.test(examplesOfBannerData[5].getDescription())).not.toThrowError(new ErrorCreatingBanner('The banner description consists of space characters.'));
-//     });
-// });
+const getSamplesOfBannerData = (): IBannerData[] => {
+    return [];
+}
+describe('Проверка баннера', () => {
+    describe('Заголовок в нормальном виде', () => {
+        const pattern = /^\s+$/g;
+        test.each(getSamplesOfBannerData())('Обработка данных "%s"', (wrapperData: IBannerData) => {
+            expect.soft(wrapperData.getTitle().length).toBeGreaterThanOrEqual(AppConfig.getTheMinimumLengthOfTheBannerHeaderString());
+            expect.soft(pattern.test(wrapperData.getTitle())).toBeFalsy();
+        });
+    });
+
+    describe('Описание в нормальном виде', () => {
+        const pattern = /^\s+$/g;
+        test.each(getSamplesOfBannerData())('Обработка данных "%s"', (wrapperData: IBannerData) => {
+            expect.soft(wrapperData.getDescription().length).toBeGreaterThanOrEqual(AppConfig.getTheMinimumLengthOfTheBannerDescriptionString());
+            expect.soft(pattern.test(wrapperData.getTitle())).toBeFalsy();
+        });
+    });
+});
