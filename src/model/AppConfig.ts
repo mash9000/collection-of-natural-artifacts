@@ -1,6 +1,13 @@
-export enum AppConfig {
-    MAX_NAVBAR_ITEMS_LENGTH = 4,
-    MAX_NAVBAR_ITEM_TITLE_LENGTH = 11,
-    MIN_LENGTH_WRAPPER_DESCRIPTION = 10,
-    MAX_LENGTH_WRAPPER_TITLE = 30
+export class AppConfig {
+    public static takeTheMinimumNumberOfMenuItems(): number {
+        return 1;
+    }
+
+    public static takeTheMaximumNumberOfMenuItems(): number {
+        return 4;
+    }
+
+    public static getTheMaximumLengthOfTheMenuItemString(): number {
+        return 11;
+    }
 }

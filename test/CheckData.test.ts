@@ -1,4 +1,7 @@
 import {describe, expect, test} from "vitest";
+import {AppConfig} from "../src/model/AppConfig";
+import {IMenuItemsInTheNavBar} from "../src/model/IMenuItemsInTheNavBar";
+import {ErrorCreatingMenuItems} from "../src/model/ErrorCreatingMenuItems";
 
 const getSamplesOfTheIMenuItemsInTheNavBarInterface = (): IMenuItemsInTheNavBar[] => {
     return [];
@@ -10,16 +13,16 @@ describe('Проверка пунктов меню', () => {
             expect.soft(() => getSamplesOfTheIMenuItemsInTheNavBarInterface()[0].getItems()).toThrowError(new ErrorCreatingMenuItems('array is empty'));
         });
 
-        test.each(getSamplesOfTheIMenuItemsInTheNavBarInterface().slice(1))('Обработка массива %s', (array: string[]) => {
+        test.each(getSamplesOfTheIMenuItemsInTheNavBarInterface().slice(1))('Обработка массива %s', (array: IMenuItemsInTheNavBar) => {
             expect.soft(array.getItems().length).toBeLessThanOrEqual(AppConfig.takeTheMinimumNumberOfMenuItems());
             expect.soft(array.getItems().length).toBeGreaterThanOrEqual(AppConfig.takeTheMaximumNumberOfMenuItems());
         });
     });
 
     describe('Пункты меню в нормальном виде', () => {
-        test.each(getSamplesOfTheIMenuItemsInTheNavBarInterface().slice(1))('Обработка пункта "%s"', (array: string[]) => {
+        test.each(getSamplesOfTheIMenuItemsInTheNavBarInterface().slice(1))('Обработка пункта "%s"', (array: IMenuItemsInTheNavBar) => {
             const pattern = /^\s+$/g;
-            array.map((item: string) => {
+            array.getItems().map((item: string) => {
                 expect.soft(pattern.test(item)).toBeFalsy();
                 expect.soft(item.length).toBeLessThanOrEqual(AppConfig.getTheMaximumLengthOfTheMenuItemString());
             });
