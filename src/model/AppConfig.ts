@@ -10,4 +10,12 @@ export class AppConfig {
     public static getTheMaximumLengthOfTheMenuItemString(): number {
         return 11;
     }
+
+    public static getTheMinimumLengthOfTheBannerHeaderString(): number {
+        return 5;
+    }
+
+    public static getTheMinimumLengthOfTheBannerDescriptionString(): number {
+        return 10;
+    }
 }
