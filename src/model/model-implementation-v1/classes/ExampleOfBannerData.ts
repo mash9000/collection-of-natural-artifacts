@@ -14,8 +14,8 @@ export class ExampleOfBannerData implements IBannerData {
     }
 
     private verifyTheDescription() {
-        if (this.description.length < AppConfig.getTheMinimumLengthOfTheBannerDescriptionString())
-            throw new ErrorCreatingBanner(`minimum length of the description string - ${AppConfig.getTheMinimumLengthOfTheBannerDescriptionString()}`);
+        if (this.description.length < AppConfig.getTheMinimumLengthOfDescriptionString())
+            throw new ErrorCreatingBanner(`minimum length of the description string - ${AppConfig.getTheMinimumLengthOfDescriptionString()}`);
     }
 
     getTitle(): string {

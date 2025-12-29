@@ -15,11 +15,19 @@ export class AppConfig {
         return 5;
     }
 
-    public static getTheMinimumLengthOfTheBannerDescriptionString(): number {
+    public static getTheMinimumLengthOfDescriptionString(): number {
         return 10;
     }
 
     public static getTheMaximumLengthOfTheTitleOfArtifactCard(): number {
+        return 10;
+    }
+
+    public static getTheMinimumRate(): number {
+        return 0;
+    }
+
+    public static getTheMaximumRate(): number {
         return 10;
     }
 }
