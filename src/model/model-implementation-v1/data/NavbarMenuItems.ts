@@ -1,4 +1,4 @@
-import {ExampleOfMenuItems} from "../ExampleOfMenuItems.ts";
+import {ExampleOfMenuItems} from "../classes/ExampleOfMenuItems.ts";
 
 export const navbarMenuItems = new ExampleOfMenuItems([
     {title: 'Каталог', link: new URL('https://ya.ru/')},

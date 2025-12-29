@@ -4,8 +4,8 @@ import type {ArtifactCardData} from "../props-interfaces/ArtifactCardData.ts";
 import {Carousel} from "./carousel/Carousel.tsx";
 import {
     navbarMenuItems
-} from "../model/model-implementation/data/NavbarMenuItems.ts";
-import {dataWrapper} from "../model/model-implementation/data/DataWrapper.ts";
+} from "../model/model-implementation-v1/data/NavbarMenuItems.ts";
+import {dataWrapper} from "../model/model-implementation-v1/data/DataWrapper.ts";
 
 export const App = () => {
     const artifactCards: ArtifactCardData[] = [

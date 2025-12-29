@@ -1,4 +1,4 @@
-import {ExampleOfBannerData} from "../ExampleOfBannerData.ts";
+import {ExampleOfBannerData} from "../classes/ExampleOfBannerData.ts";
 
 export const dataWrapper = new ExampleOfBannerData(
     'Крупнейшая коллекция природных артефактов',

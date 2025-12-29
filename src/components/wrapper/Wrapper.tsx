@@ -3,7 +3,7 @@ import '../../styles/wrapper/__heading/wrapper__heading.scss';
 import '../../styles/wrapper/__description/wrapper__description.scss';
 import '../../styles/wrapper/wrapper--adaptive.scss';
 import {ExploreLInk} from "./ExploreLInk.tsx";
-import type {IBannerData} from "../../model/IBannerData.ts";
+import type {IBannerData} from "../../model/interfaces/IBannerData.ts";
 
 type WrapperProps = {
     dataWrapper: IBannerData;

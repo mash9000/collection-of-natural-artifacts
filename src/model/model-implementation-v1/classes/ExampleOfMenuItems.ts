@@ -1,6 +1,6 @@
-import type {IMenuItemsInTheNavBar} from "../IMenuItemsInTheNavBar.ts";
-import {ErrorCreatingMenuItems} from "../ErrorCreatingMenuItems.ts";
-import {AppConfig} from "../AppConfig.ts";
+import type {IMenuItemsInTheNavBar} from "../../interfaces/IMenuItemsInTheNavBar.ts";
+import {ErrorCreatingMenuItems} from "../../errors/ErrorCreatingMenuItems.ts";
+import {AppConfig} from "../../AppConfig.ts";
 
 export class ExampleOfMenuItems implements IMenuItemsInTheNavBar {
     constructor(private readonly menuItems: { title: string, link: URL }[]) {

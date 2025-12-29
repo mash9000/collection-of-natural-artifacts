@@ -1,6 +1,6 @@
-import type {IBannerData} from "../IBannerData.ts";
-import {AppConfig} from "../AppConfig.ts";
-import {ErrorCreatingBanner} from "../ErrorCreatingBanner.ts";
+import type {IBannerData} from "../../interfaces/IBannerData.ts";
+import {AppConfig} from "../../AppConfig.ts";
+import {ErrorCreatingBanner} from "../../errors/ErrorCreatingBanner.ts";
 
 export class ExampleOfBannerData implements IBannerData {
     constructor(private readonly title: string,

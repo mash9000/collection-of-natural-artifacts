@@ -1,8 +1,8 @@
 import {describe, expect, test} from "vitest";
 import {AppConfig} from "../src/model/AppConfig";
-import {IMenuItemsInTheNavBar} from "../src/model/IMenuItemsInTheNavBar";
-import {ErrorCreatingMenuItems} from "../src/model/ErrorCreatingMenuItems";
-import {ExampleOfMenuItems} from "../src/model/model-implementation/ExampleOfMenuItems";
+import {IMenuItemsInTheNavBar} from "../src/model/interfaces/IMenuItemsInTheNavBar";
+import {ErrorCreatingMenuItems} from "../src/model/errors/ErrorCreatingMenuItems";
+import {ExampleOfMenuItems} from "../src/model/model-implementation-v1/classes/ExampleOfMenuItems";
 
 const getSamplesOfTheIMenuItemsInTheNavBarInterface = (): IMenuItemsInTheNavBar[] => {
     return [
