@@ -5,20 +5,22 @@ import '../../styles/artifact-card/__description/artifact-card__description.scss
 import '../../styles/artifact-card/__rate/artifact-card__rate.scss';
 
 import {MoreDetailedBtn} from "../MoreDetailedBtn.tsx";
-import type {ArtifactCardData} from "../../props-interfaces/ArtifactCardData.ts";
+import type {
+    IArtifactCardData
+} from "../../model/interfaces/ArtifactCard/IArtifactCardData.ts";
 
-export const ArtifactCard = (props: ArtifactCardData) => {
+export const ArtifactCard = (props: IArtifactCardData) => {
     return (
         <figure className='artifact-card'>
             <div className='artifact-card__image-container'>
-                <div className='artifact-card__rate'>{props.rate}</div>
-                <img src={`./for-artifact-card/${props.imageName}.webp`}
-                     alt={props.imageName}
+                <div className='artifact-card__rate'>{props.getRate()}</div>
+                <img src={`./for-artifact-card/${props.getImageName()}.webp`}
+                     alt={String(() => props.getImageName())}
                      className='artifact-card__image-container__image'/>
             </div>
             <figcaption className='artifact-card__description'>
-                <h3>{props.heading}</h3>
-                <p>{props.description}</p>
+                <h3>{props.getHeading()}</h3>
+                <p>{props.getDescription()}</p>
             </figcaption>
             <MoreDetailedBtn/>
         </figure>

@@ -9,13 +9,13 @@ import '../../styles/carousel/__control/__button/__prev/carousel__control__butto
 import '../../styles/carousel/__control/__info-count/carousel__control__info-count.scss';
 
 import {ArtifactCard} from "./ArtifactCard.tsx";
-import type {
-    ArtifactCardData
-} from "../../props-interfaces/ArtifactCardData.ts";
 import {useState} from "react";
+import type {
+    IArtifactCardData
+} from "../../model/interfaces/ArtifactCard/IArtifactCardData.ts";
 
 type CarouselProps = {
-    listOfArtifactCards: ArtifactCardData[];
+    listOfArtifactCards: IArtifactCardData[];
 }
 
 export const Carousel = ({listOfArtifactCards}: CarouselProps) => {
@@ -41,9 +41,9 @@ export const Carousel = ({listOfArtifactCards}: CarouselProps) => {
         <div className="carousel">
             <div>
                 {listOfArtifactCards.slice(viewingStartPosition, viewingStartPosition + NUMBER_OF_CARDS_DISPLAYED)
-                    .map((artifactCard: ArtifactCardData) =>
+                    .map((artifactCard: IArtifactCardData) =>
                     <ArtifactCard
-                        key={artifactCard.heading}
+                        key={artifactCard.getHeading()}
                         {...artifactCard}/>)}
             </div>
             <div className="carousel__control">
