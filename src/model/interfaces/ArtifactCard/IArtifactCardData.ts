@@ -1,5 +1,7 @@
 export interface IArtifactCardData {
-    getTitle(): string;
+    getHeading(): string;
+
+    getRate(): number;
 
     getDescription(): string;
 

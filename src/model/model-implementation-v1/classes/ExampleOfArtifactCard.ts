@@ -34,7 +34,7 @@ export class ExampleOfArtifactCard implements IArtifactCardData {
         return this.description;
     }
 
-    getTitle(): string {
+    getHeading(): string {
         return this.title.substring(0, AppConfig.getTheMaximumLengthOfTheTitleOfArtifactCard());
     }
 

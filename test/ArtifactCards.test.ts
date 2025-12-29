@@ -13,9 +13,9 @@ describe('Карточки артефактов', () => {
     const standardDescription: string = 'Какое-то описание';
     const standardUrl: URL = new URL("http://localhost:8080/");
     test('При попытке создания заголовка длиной до указанного требования не выбрасывает исключения', () => {
-        expect.soft(new ExampleOfArtifactCard(testNormalTitle1, standardDescription, standardUrl).getTitle().length).toBeLessThanOrEqual(AppConfig.getTheMaximumLengthOfTheTitleOfArtifactCard());
+        expect.soft(new ExampleOfArtifactCard(testNormalTitle1, standardDescription, standardUrl).getHeading().length).toBeLessThanOrEqual(AppConfig.getTheMaximumLengthOfTheTitleOfArtifactCard());
         expect.soft(() => new ExampleOfArtifactCard(testNormalTitle1, standardDescription, standardUrl)).not.toThrowError();
-        expect.soft(new ExampleOfArtifactCard(testNormalTitle2, standardDescription, standardUrl).getTitle().length).toBeLessThanOrEqual(AppConfig.getTheMaximumLengthOfTheTitleOfArtifactCard());
+        expect.soft(new ExampleOfArtifactCard(testNormalTitle2, standardDescription, standardUrl).getHeading().length).toBeLessThanOrEqual(AppConfig.getTheMaximumLengthOfTheTitleOfArtifactCard());
         expect.soft(() => new ExampleOfArtifactCard(testNormalTitle2, standardDescription, standardUrl)).not.toThrowError();
     });
 
