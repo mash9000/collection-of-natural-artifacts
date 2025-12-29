@@ -18,4 +18,8 @@ export class AppConfig {
     public static getTheMinimumLengthOfTheBannerDescriptionString(): number {
         return 10;
     }
+
+    public static getTheMaximumLengthOfTheTitleOfArtifactCard(): number {
+        return 10;
+    }
 }
