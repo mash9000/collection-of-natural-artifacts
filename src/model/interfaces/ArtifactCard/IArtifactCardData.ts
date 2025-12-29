@@ -1,4 +1,6 @@
 export interface IArtifactCardData {
+    getImageName(): () => string;
+
     getHeading(): string;
 
     getRate(): string;

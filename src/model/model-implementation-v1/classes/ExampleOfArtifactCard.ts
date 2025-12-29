@@ -12,7 +12,8 @@ export class ExampleOfArtifactCard implements IArtifactCardData {
 
     private readonly rate: number;
 
-    constructor(title: string,
+    constructor(private readonly imageName: () => string,
+                title: string,
                 description: string,
                 private readonly url: URL,
                 rate: number) {
@@ -79,12 +80,12 @@ export class ExampleOfArtifactCard implements IArtifactCardData {
             throw new ErrorCreatingArtifactCard(`длина описания должна быть не менее ${AppConfig.getTheMinimumLengthOfDescriptionString()}`);
     }
 
-    getDescription(): string {
-        return this.description;
-    }
-
     getHeading(): string {
         return this.title.substring(0, AppConfig.getTheMaximumLengthOfTheTitleOfArtifactCard());
+    }
+
+    getDescription(): string {
+        return this.description;
     }
 
     getUrl(): URL {
@@ -93,5 +94,9 @@ export class ExampleOfArtifactCard implements IArtifactCardData {
 
     getRate(): string {
         return this.rate.toFixed(1);
+    }
+
+    getImageName(): () => string {
+        return this.imageName;
     }
 }
